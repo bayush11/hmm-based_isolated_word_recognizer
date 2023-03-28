@@ -43,3 +43,7 @@ viterbi: The Viterbi algorithm is very similar to the Forward algorithm, with tw
 4. Backtrace: 𝑞⋆𝑡 = Ψ𝑡+1(𝑞⋆𝑡+1)
 
 The output of the viterbi algorithm should be the best hidden state sequence for the input observation sequence.
+
+viterbi_transition_update: This function performs a maximum likelihood update of the HMM's transition matrix using the viterbi algorithm given an input observation sequence. The transition matrix update equation is
+
+𝐴[𝑖, 𝑗] ∶= number of times a transition was made from state i to state j/ number of times the model made a transition out of state i

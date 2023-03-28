@@ -1,4 +1,4 @@
-## hmm-based_isolated_word_recognizer
+# hmm-based_isolated_word_recognizer
 
 This is a HMM Based Isolated Word Recognizer. It contains 3 parts.
 
@@ -6,14 +6,14 @@ This is a HMM Based Isolated Word Recognizer. It contains 3 parts.
 2. State-level decoding using the Viterbi algorithm
 3. Maximum likelihood re-estimation of the transition matrix, using Viterbi training.
 
-# MyHMM class description:
+## MyHMM class description:
 
 • N_states: An integer value representing the number of total states in the HMM
 • pi: A 1-dimensional array of size N_states, where pi[i] = log 𝜋𝑖
 • A: A 2-dimensional array of size N_states by N_states representing the transition matrix, where A[i,j] = log 𝑎𝑖𝑗
 • labels: A 1-dimensional array of size N_states, where labels[i] indicates the phonetic identity (class index) of state 𝑖. This can be used to retrieve the phonetic label of the state via phone_labels[labels[i]], or to retrieve the observation likelihood 𝑏𝑖 (𝑜𝑡 ) via L[t, labels[i]]
 
-# Function Descriptions:
+## Function Descriptions:
 
 load_audio_to_mel_spec_tensor: This function takes as input the path to a .wav file, and returns a PyTorch tensor of size (N_frames, 40) representing the log Mel spectrogram of the .wav file, computed over 40 Mel filters.
 
